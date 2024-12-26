@@ -3,9 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { GoSun } from "react-icons/go";
 import { FaMoon } from "react-icons/fa";
-import { auth } from "../Firebase/firebase.congig";
-import { signOut } from "firebase/auth";
-import Swal from "sweetalert2";
+
+
 
 const Header = () => {
   const { setdark, dark, user } = useContext(AuthContext);
@@ -34,7 +33,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/about`}
       >
         About
       </NavLink>
@@ -47,7 +46,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/service`}
       >
         Service
       </NavLink>
@@ -60,7 +59,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/protfolio`}
       >
         Protfolio
       </NavLink>
@@ -73,7 +72,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/blogs`}
       >
         Blogs
       </NavLink>
@@ -86,7 +85,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/testimonial`}
       >
         Testimonial
       </NavLink>
@@ -99,7 +98,7 @@ const Header = () => {
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
-        to={`/finds-losts/all-finds`}
+        to={`/contact`}
       >
         Contact
       </NavLink>
@@ -139,7 +138,7 @@ const Header = () => {
             to={`/`}
             className={`text-2xl ${dark ? "text-gray-50" : "text-gray-800"}`}
           >
-            Swift Launch
+            <img src="/logo.png" alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
