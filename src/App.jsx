@@ -17,6 +17,7 @@ function App() {
       <main className="container mx-auto min-h-screen">
         <Outlet></Outlet>
       </main>
+      
       <footer>
         <Footer></Footer>
       </footer>
