@@ -117,7 +117,21 @@ const LogIn = () => {
               LOGIN
             </button>
           </form>
+          {/* Register Section */}
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Don't have an account?{" "}
+              <Link
+                to={`/auth/register`}
+                className="text-blue-500 hover:underline font-semibold"
+              >
+                Register
+              </Link>
+            </p>
           </div>
+          
+            <Google></Google>
+        </div>
       </div>
     </>
   );

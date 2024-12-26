@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 
 const Header = () => {
   const { setdark, dark, user } = useContext(AuthContext);
- 
+  
   const handletheme = () => {
     setdark(!dark);
   };
@@ -139,13 +139,15 @@ const Header = () => {
             to={`/`}
             className={`text-2xl ${dark ? "text-gray-50" : "text-gray-800"}`}
           >
-            Engr. Sakib
+            Swift Launch
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-6">{links}</ul>
         </div>
         <div className="navbar-end">
+        
+
           {/* theme controlat start */}
           <div className="flex items-center gap-2 space-x-3">
             <button onClick={handletheme}>
