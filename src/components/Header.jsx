@@ -11,7 +11,7 @@ import { auth } from "../Firebase/firebase.congig";
 
 const Header = () => {
   const { setdark, dark, user } = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
    const singOut = () => {
      Swal.fire({
        title: "Are You want to Sing Out",

@@ -1,47 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Fade } from "react-awesome-reveal";
 
 const Mission = () => {
   const { dark } = useContext(AuthContext); // Use the theme context
 
-  const missions = [
-    {
-      id: 1,
-      icon: "📦", // Icon for Found Items
-      title: "Found Items",
-      description:
-        "Browse items reported found to reconnect them with their rightful owners.",
-    },
-    {
-      id: 2,
-      icon: "🔍", // Icon for Lost Items
-      title: "Lost Items",
-      description:
-        "Report your lost belongings and let the community help locate them.",
-    },
-    {
-      id: 3,
-      icon: "📃", // Icon for Guidelines
-      title: "Guidelines",
-      description:
-        "Learn how to report and claim lost or found items securely.",
-    },
-    {
-      id: 4,
-      icon: "🤝", // Icon for Community Support
-      title: "Community Support",
-      description:
-        "Engage with others to assist in returning lost items to owners.",
-    },
-    {
-      id: 4,
-      icon: "🤝", // Icon for Community Support
-      title: "Community Support",
-      description:
-        "Engage with others to assist in returning lost items to owners.",
-    },
-  ];
+  const [missions, setMissions] = useState([]);
+
+  
 
   return (
     <>
@@ -69,7 +35,7 @@ const Mission = () => {
         </Fade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 px-6 lg:px-20">
-          {missions.map((mission) => (
+          {missions?.map((mission) => (
             <div
               key={mission.id}
               className="group relative bg-white dark:bg-gray-700 rounded-lg shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-600"
