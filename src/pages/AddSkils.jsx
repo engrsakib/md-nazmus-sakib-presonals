@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useState } from "react";
 import useAxiosSecure from "../auth/useAxiosSecure";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddSkils = () => {
-  const axiosSecure = useAxiosSecure();
+  
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -68,22 +69,40 @@ const AddSkils = () => {
         iconUrl,
       };
 
-      await axiosSecure.post("/skils", payload);
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
 
-      // Reset the form
-      setFormData({
-        title: "",
-        description: "",
-        link: "",
-        icon: null,
-      });
-      setImagePreview(null);
-      navigate("/");
+      const response = await axios.post(
+        "http://localhost:5000/skils", // Replace with the correct API base URL
+        payload,
+        config
+      );
+
+      if (response.status === 201 || response.status === 200) {
+        alert("Data successfully submitted!");
+
+        // Reset the form
+        setFormData({
+          title: "",
+          description: "",
+          link: "",
+          icon: null,
+        });
+        setImagePreview(null);
+        navigate("/");
+      } else {
+        console.error("Error response:", response);
+        alert("Failed to submit data. Please try again.");
+      }
     } catch (error) {
       console.error("Error uploading image or sending data:", error);
       alert("Failed to submit data. Please try again.");
     }
   };
+
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Add Item</h2>
@@ -146,6 +165,9 @@ const AddSkils = () => {
           Submit
         </button>
       </form>
+      <Helmet>
+      <title>Add skils</title>
+      </Helmet>
     </div>
   );
 };

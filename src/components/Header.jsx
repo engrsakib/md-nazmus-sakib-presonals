@@ -10,7 +10,7 @@ import { auth } from "../Firebase/firebase.congig";
 
 
 const Header = () => {
-  const { setdark, dark, user } = useContext(AuthContext);
+  const { setdark, dark, user, setUser } = useContext(AuthContext);
   // console.log(user)
    const singOut = () => {
      Swal.fire({
@@ -25,6 +25,7 @@ const Header = () => {
          signOut(auth)
            .then(() => {
              // Sign-out successful.
+             setUser(null);
              Swal.fire("SingOut!", "", "success");
            })
            .catch((error) => {

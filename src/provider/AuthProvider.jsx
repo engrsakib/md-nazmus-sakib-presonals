@@ -42,33 +42,30 @@ const AuthProvider = ({ children }) => {
 
   // observerd
   useEffect(() => {
+    
     const subscribe = onAuthStateChanged(auth, (Currentuser) => {
+      setLoadding(true);
       setUser({
-        mail: Currentuser.email,
-        photo: Currentuser.photoURL,
-        name: Currentuser.displayName,
+        mail: Currentuser?.email,
+        photo: Currentuser?.photoURL,
+        name: Currentuser?.displayName,
       });
+
       setTimeout(() => {
         setLoadding(false);
-      }, 1000);
+      }, 2000);
 
-      if (Currentuser?.email) {
-        const user = { mail: Currentuser.email };
-
-        axios
-          .post("http://localhost:5000/jwt", user, {
-            withCredentials: true,
-          })
-          .then((data) => {
-            console.log(data.data);
-          });
+      if (!Currentuser) {
+        setLoadding(true);
+        setUser(null);
+        setLoadding(false);
       }
     });
 
     return () => {
       subscribe();
     };
-  }, []);
+  }, [user?.mail, setUser, user?.photo, user?.name]);
 
   // console.log(user);
   // loading
