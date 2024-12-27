@@ -5,6 +5,8 @@ import LogIn from "../auth/LogIn";
 
 import Fourzero from "../components/Fourzero";
 import Public from "./Public";
+import Privete from "./Privete";
+import AddSkils from "../pages/AddSkils";
 
 
 const router = createBrowserRouter([
@@ -25,7 +27,12 @@ const router = createBrowserRouter([
           </Public>
         ),
       },
-      
+      {
+        path: "/auth/user/skils/add",
+        element:(<Privete>
+          <AddSkils></AddSkils>
+        </Privete>)
+      },
     ],
   },
 ]);

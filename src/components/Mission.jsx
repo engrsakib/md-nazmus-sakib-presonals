@@ -34,6 +34,13 @@ const Mission = () => {
       description:
         "Engage with others to assist in returning lost items to owners.",
     },
+    {
+      id: 4,
+      icon: "🤝", // Icon for Community Support
+      title: "Community Support",
+      description:
+        "Engage with others to assist in returning lost items to owners.",
+    },
   ];
 
   return (
@@ -42,7 +49,7 @@ const Mission = () => {
         <Fade delay={1e3} cascade damping={1e-1}>
           <div className="text-center">
             <h2 className="text-4xl font-extrabold text-orange-500">
-              OUR MISSION
+              My preferable technology
             </h2>
 
             <p
@@ -50,9 +57,13 @@ const Mission = () => {
                 dark ? "text-gray-300" : "text-gray-700"
               } max-w-2xl mx-auto`}
             >
-              Empowering individuals and communities by fostering innovation,
-              creating opportunities, and making a meaningful impact on the
-              world.
+              The technology I prefer is one that is innovative, efficient, and
+              has the potential to solve real-world problems. Whether it's AI
+              (Artificial Intelligence), blockchain, or cloud computing, I value
+              technologies that enhance productivity, connectivity, and offer
+              new opportunities for growth. My preferred technology is one that
+              not only meets current needs but also anticipates future
+              challenges, helping create a smarter, more sustainable world.
             </p>
           </div>
         </Fade>
