@@ -24,6 +24,8 @@ const Slider = () => {
                 words={[
                   "Md. Nazmus Sakib",
                   "Software Engineer",
+                  "Programmer",
+                  "Problem Solver",
                   "Developer",
                   "Designer",
                   "Coder",

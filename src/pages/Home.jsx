@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import Slider from '../components/Slider';
 import { Helmet } from 'react-helmet';
-import Types from '../components/Types';
 import Mission from '../components/Mission';
 
 import { AuthContext } from '../provider/AuthProvider';
+import AboutSection from '../components/AboutSection';
 
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
         </section>
         {/* type writer start*/}
         <section>
-        <Types></Types>
+        <AboutSection></AboutSection>
         {/* weight loss */}
         
         {/* our mission */}
