@@ -4,10 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { AuthContext } from "../provider/AuthProvider";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
-import { IoMailSharp } from "react-icons/io5";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareFacebook } from "react-icons/fa6";
-import { SiLeetcode } from "react-icons/si";
+import SocilLink from "./SocilLink";
+
 const Slider = () => {
   const { dark } = useContext(AuthContext);
   return (
@@ -65,59 +63,8 @@ const Slider = () => {
               problem-solving. I'm a passionate at react, node, express, mongoDB
               and Firebase
             </p>
-            <div className="flex justify-center md:justify-start space-x-4 mb-6">
-              {/* mail */}
-              <Link
-                className="text-6xl"
-                to="#"
-                onClick={() => {
-                  window.open(
-                    "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@engrsakib.com",
-                    "_blank"
-                  );
-                }}
-              >
-                <IoMailSharp />
-              </Link>
-              {/* mail */}
-              {/* linkdIn */}
-              <Link
-                className="text-6xl"
-                to={`https://www.linkedin.com/in/engrsakib/`}
-                target="_blank"
-              >
-                <FaLinkedin />
-              </Link>
-              {/* linkdIn */}
-              {/* Facebook */}
-              <Link
-                className="text-6xl"
-                to={`https://www.facebook.com/engrsakib02/`}
-                target="_blank"
-              >
-                <FaSquareFacebook />
-              </Link>
-              {/* Facebook */}
-
-              {/* github */}
-              <Link
-                className="text-6xl"
-                to={`https://github.com/engrsakib`}
-                target="_blank"
-              >
-                <FaGithub />
-              </Link>
-              {/* github */}
-
-              {/* leetcode */}
-              <Link
-                className="text-6xl"
-                to={`https://leetcode.com/engrsakib/`}
-                target="_blank"
-              >
-                <SiLeetcode />
-              </Link>
-              {/* leetcode */}
+            <div className="flex justify-center gap-y-4 md:justify-start space-x-4 flex-wrap mb-6">
+             <SocilLink></SocilLink>
             </div>
             <button className="btn btn-primary">Hire Now</button>
           </div>
