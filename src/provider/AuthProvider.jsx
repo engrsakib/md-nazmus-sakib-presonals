@@ -43,37 +43,12 @@ const AuthProvider = ({ children }) => {
   // observerd
   useEffect(() => {
     const subscribe = onAuthStateChanged(auth, (Currentuser) => {
-      setUser(Currentuser);
+      setUser({mail:Currentuser.email, photo:Currentuser.photoURL, name:Currentuser.displayName});
       setTimeout(() => {
         setLoadding(false);
       }, 1000);
 
-      if (Currentuser?.email) {
-        const user = { email: Currentuser.email };
 
-        axios
-          .post("https://lostserver.vercel.app/jwt", user, {
-            withCredentials: true,
-          })
-          .then((data) => {
-            console.log(data.data);
-          });
-      }
-      if (Currentuser?.email) {
-        fetch(`https://lostserver.vercel.app/users/${Currentuser?.email}`)
-          .then((res) => res.json())
-          .then((data) => setUser(data[0]));
-      } else {
-        axios
-          .post(
-            "https://lostserver.vercel.app/logout",
-            {},
-            {
-              withCredentials: true,
-            }
-          )
-          .then((res) => console.log(res.data));
-      }
     });
 
     return () => {

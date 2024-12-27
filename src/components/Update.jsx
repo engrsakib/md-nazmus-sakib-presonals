@@ -88,7 +88,7 @@ const Update = () => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         const response = await fetch(
-          `https://lostserver.vercel.app/itemsUpadte/${_id}`,
+          `http://localhost:5000/itemsUpadte/${_id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
