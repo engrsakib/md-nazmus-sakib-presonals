@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoMailSharp } from "react-icons/io5";
-import { FaDev, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
 import { Link } from 'react-router-dom';
@@ -39,6 +39,16 @@ const SocilLink = () => {
           <FaSquareFacebook />
         </Link>
         {/* Facebook */}
+
+        {/* whatsapps */}
+        <Link
+          className="text-6xl"
+          to={`https://api.whatsapp.com/send/?phone=%2B8801992547202&text&type=phone_number&app_absent=0`}
+          target="_blank"
+        >
+          <FaWhatsappSquare />
+        </Link>
+        {/* whatsapps */}
 
         {/* github */}
         <Link

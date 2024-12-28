@@ -118,6 +118,7 @@ const LogIn = () => {
             </button>
           </form>
           </div>
+          {/* <Google></Google> */}
       </div>
     </>
   );

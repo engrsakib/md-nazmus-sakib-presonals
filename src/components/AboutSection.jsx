@@ -55,7 +55,7 @@ const AboutSection = () => {
         <h4 className="text-lg font-semibold uppercase tracking-wide mb-4">
           About Me
         </h4>
-        <h1 className="text-3xl lg:text-5xl leading-4 font-bold mb-6">
+        <h1 className="text-3xl lg:text-5xl  font-bold mb-6">
           A Passionate Innovator Shaping the Future of Technology
         </h1>
         <p className="text-base lg:text-lg mb-6 leading-relaxed">

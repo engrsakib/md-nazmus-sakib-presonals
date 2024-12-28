@@ -44,7 +44,7 @@ const Footer = () => {
       <footer className="footer footer-center text-base-content p-4">
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by Md. Nazmus Sakib
+            Copyright © {new Date().getFullYear()} - All right reserved. Design and develop by Md. Nazmus Sakib
           </p>
         </aside>
       </footer>
