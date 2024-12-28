@@ -52,7 +52,7 @@ const Mission = () => {
               key={mission._id}
               className="group relative bg-white dark:bg-gray-700 rounded-lg shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-600"
             >
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white rounded-full w-20 h-20 flex items-center justify-center text-4xl shadow-lg group-hover:bg-orange-600 transition-colors duration-300">
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-slate-50 border text-white rounded-full w-20 h-20 flex items-center justify-center text-4xl shadow-lg group-hover:bg-orange-600 transition-colors duration-300">
                 <img className="w-11/12 h-11/12" src={mission.iconUrl} alt="" />
               </div>
               <div className="p-6 pt-14">
