@@ -8,6 +8,7 @@ import Public from "./Public";
 import Privete from "./Privete";
 import AddSkils from "../pages/AddSkils";
 import Contact from "../pages/Contact";
+import WatchMassage from "../pages/WatchMassage";
 
 
 const router = createBrowserRouter([
@@ -30,15 +31,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/auth/user/skils/add",
-        element:(<Privete>
-          <AddSkils></AddSkils>
-        </Privete>)
+        element: (
+          <Privete>
+            <AddSkils></AddSkils>
+          </Privete>
+        ),
       },
       {
         path: "/contact",
-        element:(<Privete>
-          <Contact></Contact>
-        </Privete>)
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/auth/massage/watch",
+        element: (
+          <Privete>
+            <WatchMassage></WatchMassage>
+          </Privete>
+        ),
       },
     ],
   },

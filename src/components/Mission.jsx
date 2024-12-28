@@ -70,7 +70,7 @@ const Mission = () => {
                 </p>
 
                 <div className="mt-6 text-center">
-                  <Link to={mission.link} target="_blank" className="btn btn-sm btn-outline btn-primary group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                  <Link to={mission.link} target="_blank" className="btn btn-sm btn-outline btn-secondary group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
                     Read more
                   </Link>
                 </div>

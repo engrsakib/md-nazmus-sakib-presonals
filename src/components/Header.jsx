@@ -167,9 +167,9 @@ const Header = () => {
                : "bg-transparent hover:bg-red-400"
            } ${dark ? "text-gray-50" : "text-gray-800"}`
          }
-         to={`/donation/my-donation`}
+         to={`/auth/massage/watch`}
        >
-         Add 
+         watch Massage
        </NavLink>
 
        <button onClick={singOut}>Logout</button>
