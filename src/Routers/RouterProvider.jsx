@@ -7,6 +7,7 @@ import Fourzero from "../components/Fourzero";
 import Public from "./Public";
 import Privete from "./Privete";
 import AddSkils from "../pages/AddSkils";
+import Contact from "../pages/Contact";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
         path: "/auth/user/skils/add",
         element:(<Privete>
           <AddSkils></AddSkils>
+        </Privete>)
+      },
+      {
+        path: "/contact",
+        element:(<Privete>
+          <Contact></Contact>
         </Privete>)
       },
     ],
