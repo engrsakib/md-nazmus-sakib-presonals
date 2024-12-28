@@ -9,6 +9,7 @@ import Privete from "./Privete";
 import AddSkils from "../pages/AddSkils";
 import Contact from "../pages/Contact";
 import WatchMassage from "../pages/WatchMassage";
+import About from "../pages/About";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/auth/massage/watch",

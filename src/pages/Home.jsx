@@ -9,6 +9,7 @@ import AboutSection from '../components/AboutSection';
 
 const Home = () => {
   const{user} = useContext(AuthContext)
+    
     return (
       <>
         {/* slider section */}
