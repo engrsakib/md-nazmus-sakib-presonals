@@ -34,7 +34,7 @@ const Contact = () => {
         phone: formData.phone,
         subject: formData.subject,
         message: formData.message,
-        status: false,
+        status: true,
       };
 
       const config = {
