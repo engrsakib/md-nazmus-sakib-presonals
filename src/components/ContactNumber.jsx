@@ -38,7 +38,7 @@ const ContactNumber = () => {
           <SocilLink></SocilLink>
         </div>
         <p>
-          The best way to contact me is via mail / LinkedIN. I try to respond to every
+          The best way to contact me is via mail. I try to respond to every
           message.
         </p>
       </div>

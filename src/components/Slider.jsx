@@ -19,7 +19,7 @@ const Slider = () => {
           {/* Left Section */}
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Hi, <span className="text-yellow-500">I AM </span>
+              Hi, <span className="text-[#00B5FF]">I AM </span>
               <Typewriter
                 words={[
                   "Md. Nazmus Sakib",
@@ -46,7 +46,7 @@ const Slider = () => {
                 to={`https://diu.ac/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-500"
+                className="text-[#00B5FF]"
               >
                 Dhaka International University's
               </Link>{" "}
@@ -55,7 +55,7 @@ const Slider = () => {
                 to={`https://diu.ac/department/department-of-cse`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-500"
+                className="text-[#00B5FF]"
               >
                 Computer Science and Engineering
               </Link>{" "}

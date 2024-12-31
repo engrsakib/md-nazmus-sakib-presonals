@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import useAxiosSecure from "../auth/useAxiosSecure";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const AddSkils = () => {
@@ -9,6 +8,7 @@ const AddSkils = () => {
     title: "",
     description: "",
     link: "",
+    percentage: "", // Added percentage field
     icon: null,
   });
   const navigate = useNavigate();
@@ -65,6 +65,7 @@ const AddSkils = () => {
         title: formData.title,
         description: formData.description,
         link: formData.link,
+        percentage: formData.percentage, // Include percentage field
         iconUrl,
       };
 
@@ -88,6 +89,7 @@ const AddSkils = () => {
           title: "",
           description: "",
           link: "",
+          percentage: "",
           icon: null,
         });
         setImagePreview(null);
@@ -104,7 +106,7 @@ const AddSkils = () => {
 
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold text-center mb-4">Add Item</h2>
+      <h2 className="text-2xl font-bold text-center mb-4">Add Skill</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block font-medium mb-1">Title</label>
@@ -142,6 +144,20 @@ const AddSkils = () => {
           />
         </div>
         <div>
+          <label className="block font-medium mb-1">Percentage</label>
+          <input
+            type="number"
+            name="percentage"
+            value={formData.percentage}
+            onChange={handleInputChange}
+            className="input input-bordered w-full"
+            placeholder="Enter percentage (0-100)"
+            min="0"
+            max="100"
+            required
+          />
+        </div>
+        <div>
           <label className="block font-medium mb-1">
             Icon (PNG, max 500KB)
           </label>
@@ -165,7 +181,7 @@ const AddSkils = () => {
         </button>
       </form>
       <Helmet>
-        <title>Add skils</title>
+        <title>Add Skills</title>
       </Helmet>
     </div>
   );
