@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 import profile from "/sakib.png";
 const AboutSection = () => {
   const { dark } = useContext(AuthContext);
@@ -13,6 +14,13 @@ const AboutSection = () => {
     setCurrentYear(year);
     setCurrentMonth(month);
   }, []);
+  useEffect(()=>{
+    Swal.fire({
+      title: "Development in Progress",
+      text: "This site is under development. Some features may not work properly.",
+      icon: "question",
+    });
+  },[])
 
   const calculateDifference = () => {
     // September 2023 (month 8, because months are 0-based)
@@ -64,6 +72,7 @@ const AboutSection = () => {
         <button className="btn btn-info px-6 py-3 rounded-lg shadow">
           Download CV
         </button>
+        
       </div>
     </div>
   );

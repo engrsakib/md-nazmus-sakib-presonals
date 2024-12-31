@@ -31,7 +31,7 @@ const EaducationalC = () => {
     },
     {
       title: "Dakhil (Science)",
-      company: "Tanthonia Nurun Ala Nur Fazil Madrasah",
+      company: "Thanthonia Nurun Ala Nur Fazil Madrasah",
       duration: "Jan 2015 - Mar 2017",
       time: "2 Years",
       result: "GPA: 4.72",

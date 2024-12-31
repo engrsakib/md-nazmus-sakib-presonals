@@ -5,6 +5,8 @@ import ContactNumber from "../components/ContactNumber";
 import { Link } from "react-router-dom";
 import SkilsBar from "../components/skilsBar/SkilsBar";
 import EaducationalC from "../components/Eaducation/EaducationalC";
+import profile from "/sakib.png";
+import WorkingInterest from "../components/working interest/WorkingInterest";
 
 const About = () => {
   const { dark } = useContext(AuthContext);
@@ -29,17 +31,33 @@ const About = () => {
 
       <main className="lg:p-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-          {/* Profile Image */}
-          <div className="w-full lg:w-1/4">
-            <img
-              src="https://i.ibb.co.com/jztNZC4/Md-Nazmus-Sakib-pasport-size.jpg"
-              alt="Profile"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <section className="w-full lg:w-1/4">
+            {/* Profile Image */}
+            <div className="w-full">
+              <img src={profile} className="rounded-lg shadow-lg" />
+            </div>
+            <div>
+              <p className="text-justify mt-4">
+                As a Computer Science and Engineering graduate and a passionate
+                programmer, I stay up-to-date with emerging technologies and
+                embrace challenges to adapt and solve real-world problems
+                effectively. I specialize in web application development using
+                the MERN stack, combining technical expertise with a passion for
+                innovation. Becoming an engineer has been my dream since
+                childhood, and I am proud to be on this journey, continually
+                striving to turn my aspirations into reality.
+              </p>
+            </div>
+            {/* workingInterested */}
+            <div>
+              <p className=" font-black"> Working Interested</p>
+              <WorkingInterest></WorkingInterest>
+            </div>
+            {/* Hobby */}
+          </section>
 
           {/* About Section */}
-          <div className="w-full lg:w-3/4">
+          <div className="w-full lg:w-3/4 lg:p-6 rounded-lg lg:shadow-lg">
             <h2 className="text-2xl font-bold mb-4">Greetings!</h2>
             <p className="mb-4">
               I am Md. Nazmus Sakib, and engineering student at{" "}

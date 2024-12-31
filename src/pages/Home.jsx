@@ -31,6 +31,7 @@ const Home = () => {
           <meta charSet="utf-8" />
           <title>Home</title>
         </Helmet>
+        
       </>
     );
 };
