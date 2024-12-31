@@ -274,7 +274,7 @@ const Update = () => {
 
           {/* Submit Button */}
           <div className="text-center">
-            <button type="submit" className="btn btn-primary w-full">
+            <button type="submit" className="btn btn-info w-full">
               Update
             </button>
           </div>

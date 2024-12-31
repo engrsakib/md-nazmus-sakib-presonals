@@ -66,9 +66,9 @@ const Slider = () => {
               and Firebase
             </p>
             <div className="flex justify-center gap-y-4 md:justify-start space-x-4 flex-wrap mb-6">
-             <SocilLink></SocilLink>
+              <SocilLink></SocilLink>
             </div>
-            <button className="btn btn-primary">Hire Now</button>
+            <button className="btn btn-info">Hire Now</button>
           </div>
 
           {/* Right Section */}

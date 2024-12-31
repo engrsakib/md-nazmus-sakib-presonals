@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 
-
 const AboutSection = () => {
   const { dark } = useContext(AuthContext);
   const [currentYear, setCurrentYear] = useState(null);
@@ -17,21 +16,18 @@ const AboutSection = () => {
 
   const calculateDifference = () => {
     // September 2023 (month 8, because months are 0-based)
-    const september2023 = new Date(2023, 8); 
+    const september2023 = new Date(2023, 8);
     const currentDate = new Date();
 
-    
     let diffInYears = currentDate.getFullYear() - september2023.getFullYear();
     let diffInMonths = currentDate.getMonth() - september2023.getMonth();
 
     if (diffInMonths < 0) {
-     
       diffInYears -= 1;
       diffInMonths += 12;
     }
 
-   
-    const totalMonthsDifference = diffInYears ;
+    const totalMonthsDifference = diffInYears;
     return totalMonthsDifference;
   };
 
@@ -60,12 +56,12 @@ const AboutSection = () => {
         </h1>
         <p className="text-base lg:text-lg mb-6 leading-relaxed">
           I&#39;m a web designer, and I&#39;m very passionate and dedicated to
-          my work. With {calculateDifference()} years {currentMonth} months of experience as a
-          professional web developer, I have acquired the skills and knowledge
-          necessary to make your project a success. I enjoy every step of the
-          design process, from discussion to collaboration.
+          my work. With {calculateDifference()} years {currentMonth} months of
+          experience as a professional web developer, I have acquired the skills
+          and knowledge necessary to make your project a success. I enjoy every
+          step of the design process, from discussion to collaboration.
         </p>
-        <button className="btn btn-primary px-6 py-3 rounded-lg shadow">
+        <button className="btn btn-info px-6 py-3 rounded-lg shadow">
           Download CV
         </button>
       </div>

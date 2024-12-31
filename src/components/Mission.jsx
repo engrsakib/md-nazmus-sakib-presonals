@@ -10,17 +10,17 @@ const Mission = () => {
 
   // const [missions, setMissions] = useState([]);
 
-    const {isPending, data:missions} = useQuery({
-      queryKey: ["missions"],
-      queryFn: async () => {
-        const response = await fetch("http://localhost:5000/skils");
-        const data = await response.json();
-        return data;
-      },
-    })
-    if (isPending) {
-      return <Loading></Loading>;
-    }
+  const { isPending, data: missions } = useQuery({
+    queryKey: ["missions"],
+    queryFn: async () => {
+      const response = await fetch("http://localhost:5000/skils");
+      const data = await response.json();
+      return data;
+    },
+  });
+  if (isPending) {
+    return <Loading></Loading>;
+  }
   return (
     <>
       <div className={`py-16 }`}>
@@ -70,7 +70,11 @@ const Mission = () => {
                 </p>
 
                 <div className="mt-6 text-center">
-                  <Link to={mission.link} target="_blank" className="btn btn-sm btn-outline btn-secondary group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                  <Link
+                    to={mission.link}
+                    target="_blank"
+                    className="btn btn-sm btn-outline btn-info group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300"
+                  >
                     Read more
                   </Link>
                 </div>

@@ -36,7 +36,7 @@ const Footer = () => {
                 placeholder="username@site.com"
                 className="input input-bordered join-item"
               />
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="btn btn-info join-item">Subscribe</button>
             </div>
           </fieldset>
         </form>
@@ -44,7 +44,8 @@ const Footer = () => {
       <footer className="footer footer-center text-base-content p-4">
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - All right reserved. Design and develop by Md. Nazmus Sakib
+            Copyright © {new Date().getFullYear()} - All right reserved. Design
+            and develop by Md. Nazmus Sakib
           </p>
         </aside>
       </footer>

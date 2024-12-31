@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import Google from "../components/Google";
 
 const LogIn = () => {
-  const { dark, logInMail, setUser, user} = useContext(AuthContext);
+  const { dark, logInMail, setUser, user } = useContext(AuthContext);
   const location = useLocation();
   // console.log(location.state)
   const [formData, setFormData] = useState({
@@ -34,13 +34,11 @@ const LogIn = () => {
         const user = userCredential.user;
         setUser(user);
         Swal.fire("LogIn successed", "", "success");
-        navigate(location.state ? location.state : '/');
+        navigate(location.state ? location.state : "/");
         // ...
       })
       .catch((error) => {
-       
         Swal.fire("Mail or password is wrong", "", "info");
-
       });
   };
 
@@ -113,12 +111,12 @@ const LogIn = () => {
               </a>
             </div>
             {/* Submit Button */}
-            <button type="submit" className="btn btn-primary w-full">
+            <button type="submit" className="btn btn-info w-full">
               LOGIN
             </button>
           </form>
-          </div>
-          {/* <Google></Google> */}
+        </div>
+        {/* <Google></Google> */}
       </div>
     </>
   );

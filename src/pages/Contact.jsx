@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
-import SocilLink from "../components/SocilLink";
+
+import ContactNumber from "../components/ContactNumber";
 
 const Contact = () => {
   const { dark } = useContext(AuthContext);
@@ -14,7 +15,6 @@ const Contact = () => {
     message: "",
     status: false,
   });
-  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -73,17 +73,7 @@ const Contact = () => {
     }
   };
 
-  const handleCopyToClipboard = () => {
-    const email = "info@engrsakib.com";
-    navigator.clipboard
-      .writeText(email)
-      .then(() => {
-        Swal.fire("Mail is copy in clipboard", "", "success");
-      })
-      .catch((err) => {
-        Swal.fire("Mail ic copy field", "", "error");
-      });
-  };
+  
   return (
     <div
       className={`min-h-screen p-8 ${
@@ -112,33 +102,7 @@ const Contact = () => {
             committed to delivering high-quality solutions.
           </p>
 
-          <div className="space-y-4 w-full">
-            <div>
-              <p className="font-bold">Give me a call</p>
-              <p>+880-1992547202</p>
-              {/* <p>+880-1577147931</p> */}
-            </div>
-            <div>
-              <p className="font-bold">Send me an email</p>
-              <p
-                className="cursor-pointer text-blue-500 underline"
-                onClick={handleCopyToClipboard}
-              >
-                info@engrsakib.com
-              </p>
-            </div>
-            <div>
-              <p className="font-bold">Location</p>
-              <p>Notun bazar, Vhatara, Dhaka</p>
-            </div>
-            <div className="flex justify-center items-center gap-y-4 md:justify-start space-x-4 flex-wrap mb-6">
-              <SocilLink></SocilLink>
-            </div>
-            <p>
-              The best way to contact me is via whatsapp. I try to respond to
-              every message.
-            </p>
-          </div>
+          <ContactNumber></ContactNumber>
         </div>
 
         <div className="w-full md:w-1/2">
@@ -195,7 +159,7 @@ const Contact = () => {
               rows="4"
               required
             ></textarea>
-            <button type="submit" className="btn btn-primary w-full">
+            <button type="submit" className="btn btn-info w-full">
               SUBMIT NOW
             </button>
           </form>

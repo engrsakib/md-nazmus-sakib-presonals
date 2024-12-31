@@ -5,7 +5,6 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const AddSkils = () => {
-  
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -161,12 +160,12 @@ const AddSkils = () => {
             />
           )}
         </div>
-        <button type="submit" className="btn btn-primary w-full">
+        <button type="submit" className="btn btn-info w-full">
           Submit
         </button>
       </form>
       <Helmet>
-      <title>Add skils</title>
+        <title>Add skils</title>
       </Helmet>
     </div>
   );
