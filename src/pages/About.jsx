@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import ContactNumber from "../components/ContactNumber";
 import { Link } from "react-router-dom";
 import SkilsBar from "../components/skilsBar/SkilsBar";
+import EaducationalC from "../components/Eaducation/EaducationalC";
 
 const About = () => {
   const { dark } = useContext(AuthContext);
@@ -102,6 +103,8 @@ const About = () => {
               solutions across my projects.
             </p>
             <SkilsBar></SkilsBar>
+            {/* eaducation */}
+            <EaducationalC></EaducationalC>
           </div>
         </div>
 
