@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-
+import profile from "/sakib.png";
 const AboutSection = () => {
   const { dark } = useContext(AuthContext);
   const [currentYear, setCurrentYear] = useState(null);
@@ -33,14 +33,14 @@ const AboutSection = () => {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row items-center justify-center py-16 px-8 lg:px-32 ${
+      className={`flex flex-col lg:flex-row items-center justify-center py-16 lg:px-8  ${
         dark ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       {/* Image Section */}
       <div className="lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
         <img
-          src="https://i.ibb.co.com/jztNZC4/Md-Nazmus-Sakib-pasport-size.jpg" // Replace with your image path
+          src={profile}
           alt="Developer"
           className="rounded-lg shadow-lg w-64 lg:w-96"
         />

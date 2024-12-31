@@ -46,7 +46,7 @@ const Mission = () => {
           </div>
         </Fade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 px-6 lg:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 lg:px-20">
           {missions?.map((mission) => (
             <div
               key={mission._id}

@@ -5,6 +5,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import SocilLink from "./SocilLink";
+import bannarIMG from "/bannarImg.jpg";
+
 
 const Slider = () => {
   const { dark } = useContext(AuthContext);
@@ -14,7 +16,7 @@ const Slider = () => {
         dark ? "bg-[#171212] text-white" : "bg-white text-black"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-4">
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Section */}
           <div className="flex-1 text-center md:text-left">
@@ -74,7 +76,7 @@ const Slider = () => {
           {/* Right Section */}
           <div className="flex-1 mt-8 md:mt-0">
             <img
-              src="https://i.ibb.co.com/nMDcPpZ/467675085-570061879133815-2123370292224643458-n-1.jpg"
+              src={bannarIMG}
               alt="Hero"
               className="rounded-full shadow-lg"
             />

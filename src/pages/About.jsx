@@ -27,7 +27,7 @@ const About = () => {
         </div>
       </header>
 
-      <main className="p-6">
+      <main className="lg:p-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
           {/* Profile Image */}
           <div className="w-full lg:w-1/4">

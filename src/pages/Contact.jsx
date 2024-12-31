@@ -2,8 +2,9 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
-
 import ContactNumber from "../components/ContactNumber";
+
+import animation from "/contact.gif";
 
 const Contact = () => {
   const { dark } = useContext(AuthContext);
@@ -76,7 +77,7 @@ const Contact = () => {
   
   return (
     <div
-      className={`min-h-screen p-8 ${
+      className={`min-h-screen lg:p-8 ${
         dark ? "bg-[#171212] text-gray-300" : "bg-white text-gray-800"
       }`}
     >
@@ -84,7 +85,7 @@ const Contact = () => {
         {/* Left Section */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <img
-            src="https://i.ibb.co.com/BrnjSY6/2.gif"
+            src={animation}
             alt="Contact"
             className="w-full h-auto rounded-lg shadow-md"
           />
