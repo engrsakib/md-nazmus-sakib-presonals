@@ -7,6 +7,8 @@ import SkilsBar from "../components/skilsBar/SkilsBar";
 import EaducationalC from "../components/Eaducation/EaducationalC";
 import profile from "/sakib.png";
 import WorkingInterest from "../components/working interest/WorkingInterest";
+import Extra from "../components/extra caricluam/Extra";
+import Presonal from "../components/personalInfromation/Presonal";
 
 const About = () => {
   const { dark } = useContext(AuthContext);
@@ -49,11 +51,20 @@ const About = () => {
               </p>
             </div>
             {/* workingInterested */}
-            <div>
-              <p className=" font-black"> Working Interested</p>
+            <div className="mt-4">
+              <p className="uppercase font-black"> Working Interested</p>
               <WorkingInterest></WorkingInterest>
             </div>
-            {/* Hobby */}
+            {/* Other skils */}
+            <div className="mt-4">
+              <p className="uppercase font-black">extracurricular activities</p>
+              <Extra></Extra>
+            </div>
+            {/* Presonal Information */}
+            <div className="mt-4">
+              <p className="uppercase font-black">preSonal Infromation</p>
+              <Presonal></Presonal>
+            </div>
           </section>
 
           {/* About Section */}
