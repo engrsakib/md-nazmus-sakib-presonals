@@ -1,15 +1,19 @@
 import React from 'react';
-import { IoMailSharp } from "react-icons/io5";
+import { IoLogoYoutube, IoMailSharp } from "react-icons/io5";
 import { FaDev, FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const SocilLink = () => {
+  const {pathname} = useLocation();
+  // console.log(pathname)
     return (
       <>
         {/* mail */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to="#"
           onClick={() => {
             window.open(
@@ -23,7 +27,9 @@ const SocilLink = () => {
         {/* mail */}
         {/* linkdIn */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://www.linkedin.com/in/engrsakib/`}
           target="_blank"
         >
@@ -32,17 +38,32 @@ const SocilLink = () => {
         {/* linkdIn */}
         {/* Facebook */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://www.facebook.com/engrsakib02/`}
           target="_blank"
         >
           <FaSquareFacebook />
         </Link>
         {/* Facebook */}
+        {/* Youtube */}
+        <Link
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
+          to={`https://www.youtube.com/@engrsakib02`}
+          target="_blank"
+        >
+          <IoLogoYoutube />
+        </Link>
+        {/* Youtube */}
 
         {/* whatsapps */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://api.whatsapp.com/send/?phone=%2B8801992547202&text&type=phone_number&app_absent=0`}
           target="_blank"
         >
@@ -52,7 +73,9 @@ const SocilLink = () => {
 
         {/* github */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://github.com/engrsakib`}
           target="_blank"
         >
@@ -62,7 +85,9 @@ const SocilLink = () => {
 
         {/* devto */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://dev.to/engrsakib`}
           target="_blank"
         >
@@ -72,7 +97,9 @@ const SocilLink = () => {
 
         {/* leetcode */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://leetcode.com/engrsakib/`}
           target="_blank"
         >
@@ -82,7 +109,9 @@ const SocilLink = () => {
 
         {/* codeforce */}
         <Link
-          className="text-6xl"
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
           to={`https://codeforces.com/profile/engrsakib`}
           target="_blank"
         >

@@ -10,6 +10,7 @@ import AddSkils from "../pages/AddSkils";
 import Contact from "../pages/Contact";
 import WatchMassage from "../pages/WatchMassage";
 import About from "../pages/About";
+import Services from "../pages/Services";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/service",
+        element: <Services></Services>,
       },
       {
         path: "/about",
