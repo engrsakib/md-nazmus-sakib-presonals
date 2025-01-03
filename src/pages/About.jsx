@@ -36,7 +36,10 @@ const About = () => {
           <section className="w-full lg:w-1/4">
             {/* Profile Image */}
             <div className="w-full">
-              <img src={profile} className="rounded-lg shadow-lg" />
+              <img
+                src={`https://i.imgur.com/a6pZRny.jpeg`}
+                className="rounded-lg shadow-lg"
+              />
             </div>
             <div>
               <p className="text-justify mt-4">

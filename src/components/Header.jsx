@@ -6,6 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import { signOut } from "firebase/auth";
 import Swal from "sweetalert2";
 import { auth } from "../Firebase/firebase.congig";
+import DownloadResume from "./Button/DownloadResume";
 
 
 
@@ -245,7 +246,8 @@ const Header = () => {
               </ul>
             </div>
           )}
-
+          {/* Dowenload resume */}
+          <DownloadResume></DownloadResume>
           {/* theme controlat start */}
           <div className="flex items-center gap-2 space-x-3">
             <button onClick={handletheme}>

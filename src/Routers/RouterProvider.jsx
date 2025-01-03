@@ -11,6 +11,8 @@ import Contact from "../pages/Contact";
 import WatchMassage from "../pages/WatchMassage";
 import About from "../pages/About";
 import Services from "../pages/Services";
+import DeveloperProfile from "../components/DeveloperProfiles/DeveloperProfile";
+
 
 
 const router = createBrowserRouter([
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/skils",
+        element: <DeveloperProfile></DeveloperProfile>,
       },
       {
         path: "/auth/massage/watch",

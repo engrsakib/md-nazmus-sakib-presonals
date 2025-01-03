@@ -6,6 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import SocilLink from "./SocilLink";
 import bannarIMG from "/bannarImg.jpg";
+import DownloadResume from "./Button/DownloadResume";
 
 
 const Slider = () => {
@@ -70,7 +71,9 @@ const Slider = () => {
             <div className="flex justify-center gap-y-4 md:justify-start space-x-4 flex-wrap mb-6">
               <SocilLink></SocilLink>
             </div>
-            <button className="btn btn-info">Hire Now</button>
+
+            {/* resume Downloda */}
+            <DownloadResume></DownloadResume>
           </div>
 
           {/* Right Section */}
