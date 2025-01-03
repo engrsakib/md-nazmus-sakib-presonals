@@ -3,16 +3,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-const AddSkils = () => {
+const AddSkills = () => {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     link: "",
     percentage: "", // Added percentage field
     icon: null,
+    photoURL: "", // Added photoURL field
   });
   const navigate = useNavigate();
   const [imagePreview, setImagePreview] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +38,7 @@ const AddSkils = () => {
       setFormData((prevData) => ({
         ...prevData,
         icon: file,
+        photoURL: "", // Clear photoURL if file is chosen
       }));
       setImagePreview(URL.createObjectURL(file));
     }
@@ -44,21 +47,25 @@ const AddSkils = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.icon) {
-      alert("Please upload an icon.");
+    if (!formData.icon && !formData.photoURL) {
+      alert("Please upload an icon or provide a photo URL.");
       return;
     }
 
-    try {
-      // Upload image to ImgBB
-      const imgFormData = new FormData();
-      imgFormData.append("image", formData.icon);
-      const imgbbResponse = await axios.post(
-        "https://api.imgbb.com/1/upload?key=ff3d9127cce3eed275891ef32d478736",
-        imgFormData
-      );
+    let iconUrl = formData.photoURL;
 
-      const iconUrl = imgbbResponse.data.data.url;
+    try {
+      if (formData.icon) {
+        // Upload image to ImgBB
+        const imgFormData = new FormData();
+        imgFormData.append("image", formData.icon);
+        const imgbbResponse = await axios.post(
+          `https://api.imgbb.com/1/upload?key=${process.env.REACT_APP_IMGBB_API_KEY}`,
+          imgFormData
+        );
+
+        iconUrl = imgbbResponse.data.data.url;
+      }
 
       // Send data to the database
       const payload = {
@@ -91,6 +98,7 @@ const AddSkils = () => {
           link: "",
           percentage: "",
           icon: null,
+          photoURL: "",
         });
         setImagePreview(null);
         navigate("/");
@@ -105,7 +113,7 @@ const AddSkils = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-lg mx-auto mt-20 p-6 bg-white shadow-md rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Add Skill</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -166,7 +174,6 @@ const AddSkils = () => {
             accept=".png"
             onChange={handleFileChange}
             className="file-input file-input-bordered w-full"
-            required
           />
           {imagePreview && (
             <img
@@ -176,10 +183,65 @@ const AddSkils = () => {
             />
           )}
         </div>
+        <div>
+          <label className="block font-medium mb-1">Photo URL</label>
+          <input
+            type="url"
+            name="photoURL"
+            value={formData.photoURL}
+            onChange={handleInputChange}
+            className="input input-bordered w-full"
+            placeholder="Enter photo URL"
+            disabled={!!formData.icon} // Disable if file is chosen
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => setIsModalOpen(true)}
+          className="btn btn-info w-full"
+        >
+          Choose Photo
+        </button>
+
         <button type="submit" className="btn btn-info w-full">
           Submit
         </button>
       </form>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">Choose Photo</h3>
+            <div className="space-y-4">
+              <input
+                type="file"
+                accept=".png"
+                onChange={(e) => {
+                  handleFileChange(e);
+                  setIsModalOpen(false);
+                }}
+                className="file-input file-input-bordered w-full"
+              />
+              <input
+                type="url"
+                placeholder="Photo URL"
+                className="input input-bordered w-full"
+                onChange={(e) => {
+                  handleInputChange(e);
+                  setIsModalOpen(false);
+                }}
+              />
+            </div>
+            <div className="modal-action">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="btn btn-secondary"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <Helmet>
         <title>Add Skills</title>
       </Helmet>
@@ -187,4 +249,4 @@ const AddSkils = () => {
   );
 };
 
-export default AddSkils;
+export default AddSkills;
