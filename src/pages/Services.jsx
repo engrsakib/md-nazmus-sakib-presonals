@@ -1,17 +1,11 @@
-import React, { useContext } from "react";
+
 import { AuthContext } from "../provider/AuthProvider";
-import {
-  FaCamera,
-  FaCode,
-  FaDesktop,
-  FaLightbulb,
-  FaMobile,
-  FaPenFancy,
-} from "react-icons/fa";
-import { FaCodeMerge } from "react-icons/fa6";
+
+
 import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../components/Loading";
+import { useContext } from "react";
 
 const Services = () => {
   const { dark } = useContext(AuthContext);
@@ -93,7 +87,7 @@ const Services = () => {
             >
               <div className="flex justify-center mb-4">
                 <div className="transition-transform duration-300 transform hover:scale-105">
-                  {service.icon}
+                  <img className="w-16" src={service.icon} alt="icons" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-center uppercase mb-2">

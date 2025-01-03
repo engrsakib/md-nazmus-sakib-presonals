@@ -24,7 +24,7 @@ const AddProject = () => {
       youtubeLink,
       technologies,
     };
-    console.log(projectData);
+
     try {
       const response = await axios.post(
         "http://localhost:5000/projects",
@@ -35,7 +35,20 @@ const AddProject = () => {
           },
         }
       );
-      console.log(response.data); // handle response
+
+      if (response.data.success) {
+        // Clear the form fields if the response is successful
+        setTitle("");
+        setDescription("");
+        setPhotoURL("");
+        setClientsSide("");
+        setServerSide("");
+        setLiveLink("");
+        setYoutubeLink("");
+        setTechnologies([]);
+
+        console.log(response.data); // handle response
+      }
     } catch (error) {
       console.error(error);
     }

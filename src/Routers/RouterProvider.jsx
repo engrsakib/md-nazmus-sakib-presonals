@@ -13,6 +13,7 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 import DeveloperProfile from "../components/DeveloperProfiles/DeveloperProfile";
 import AddProject from "../pages/AddProject";
+import Projects from "../components/Projects/Projects";
 
 
 
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/project",
+        element: <Projects></Projects>,
       },
       {
         path: "/skils",
