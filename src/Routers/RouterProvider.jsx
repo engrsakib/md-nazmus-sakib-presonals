@@ -12,6 +12,7 @@ import WatchMassage from "../pages/WatchMassage";
 import About from "../pages/About";
 import Services from "../pages/Services";
 import DeveloperProfile from "../components/DeveloperProfiles/DeveloperProfile";
+import AddProject from "../pages/AddProject";
 
 
 
@@ -63,6 +64,14 @@ const router = createBrowserRouter([
         element: (
           <Privete>
             <WatchMassage></WatchMassage>
+          </Privete>
+        ),
+      },
+      {
+        path: "/auth/massage/addProject",
+        element: (
+          <Privete>
+            <AddProject></AddProject>
           </Privete>
         ),
       },
