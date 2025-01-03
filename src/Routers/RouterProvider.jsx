@@ -15,6 +15,7 @@ import DeveloperProfile from "../components/DeveloperProfiles/DeveloperProfile";
 
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",

@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { FaCodeMerge } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
+import { useQuery } from "@tanstack/react-query";
 
 const Services = () => {
   const { dark } = useContext(AuthContext);
@@ -53,6 +54,21 @@ const Services = () => {
     },
   ];
 
+  // const {
+  //   isPending,
+  //   data: services,
+  //   refetch,
+  // } = useQuery({
+  //   queryKey: ["watch-massage"],
+  //   queryFn: async () => {
+  //     const response = await fetch(
+  //       "http://localhost:5000/http:/service"
+  //     );
+  //     const data = await response.json();
+  //     return data;
+  //   },
+  // });
+  
   return (
     <>
       <section
