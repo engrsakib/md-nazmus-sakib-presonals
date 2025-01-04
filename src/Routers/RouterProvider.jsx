@@ -14,6 +14,8 @@ import Services from "../pages/Services";
 import DeveloperProfile from "../components/DeveloperProfiles/DeveloperProfile";
 import AddProject from "../pages/AddProject";
 import Projects from "../components/Projects/Projects";
+import AddBlogs from "../components/Blogs/AddBlogs";
+import Blogs from "../components/Blogs/Blogs";
 
 
 
@@ -61,6 +63,10 @@ const router = createBrowserRouter([
         element: <Projects></Projects>,
       },
       {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
         path: "/skils",
         element: <DeveloperProfile></DeveloperProfile>,
       },
@@ -77,6 +83,14 @@ const router = createBrowserRouter([
         element: (
           <Privete>
             <AddProject></AddProject>
+          </Privete>
+        ),
+      },
+      {
+        path: "/auth/user/blogs/add",
+        element: (
+          <Privete>
+            <AddBlogs></AddBlogs>
           </Privete>
         ),
       },

@@ -83,7 +83,7 @@ const Services = () => {
           {services?.map((service, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-100 shadow-md rounded-md transition-all duration-300 dark:bg-[#2b2b2b] hover:bg-sky-500 hover:shadow-xl text-white"
+              className="p-6 bg-[#171212] shadow-md rounded-md transition-all duration-300 border hover:bg-sky-500 hover:shadow-xl text-white"
             >
               <div className="flex justify-center mb-4">
                 <div className="transition-transform duration-300 transform hover:scale-105">
