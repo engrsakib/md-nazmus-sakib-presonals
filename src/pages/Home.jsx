@@ -5,6 +5,7 @@ import Mission from '../components/Mission';
 
 import { AuthContext } from '../provider/AuthProvider';
 import AboutSection from '../components/AboutSection';
+import HomeProjects from '../components/Home/HomeProjects';
 
 
 const Home = () => {
@@ -25,6 +26,9 @@ const Home = () => {
         <Mission></Mission>
         {/* active donations */}
         
+
+        {/* projects */}
+        <HomeProjects></HomeProjects>
         </section>
         {/* type writer end*/}
         <Helmet>
