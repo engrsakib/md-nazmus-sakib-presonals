@@ -6,6 +6,7 @@ import Mission from '../components/Mission';
 import { AuthContext } from '../provider/AuthProvider';
 import AboutSection from '../components/AboutSection';
 import HomeProjects from '../components/Home/HomeProjects';
+import HomeBlogs from '../components/Blogs/HomeBlogs';
 
 
 const Home = () => {
@@ -29,6 +30,10 @@ const Home = () => {
 
         {/* projects */}
         <HomeProjects></HomeProjects>
+
+        {/* blogs */}
+        <HomeBlogs></HomeBlogs>
+
         </section>
         {/* type writer end*/}
         <Helmet>

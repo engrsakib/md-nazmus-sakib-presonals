@@ -54,7 +54,9 @@ const BlogCard = ({ blog }) => {
       {/* Card Content */}
       <div className="card-body p-6 space-y-4">
         {/* Title */}
-        <h2 className="card-title text-xl font-bold text-gray-800">{title}</h2>
+        <h2 className="card-title text-xl font-bold text-gray-800">
+          {title.length > 100 ? `${title.substring(0, 100)}...` : title}
+        </h2>
 
         {/* Description */}
         <p className="text-sm text-gray-600 leading-relaxed">
