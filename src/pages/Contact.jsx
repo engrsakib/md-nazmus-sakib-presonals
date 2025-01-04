@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 const Contact = () => {
   const { dark } = useContext(AuthContext);
   const { pathname } = useLocation();
-
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -173,10 +173,11 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Contact</title>
-      </Helmet>
+      {pathname == "/contact" && (
+        <Helmet>
+          <title>Contact</title>
+        </Helmet>
+      )}
     </div>
   );
 };
