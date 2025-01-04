@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Loading from "../Loading";
 import { AuthContext } from "../../provider/AuthProvider";
 import Project from "./Project";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
   const { dark } = useContext(AuthContext);
@@ -40,6 +41,10 @@ const Projects = () => {
           <Project key={project._id} project={project} />
         ))}
       </div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Project</title>
+      </Helmet>
     </div>
   );
 };

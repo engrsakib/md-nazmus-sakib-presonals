@@ -47,7 +47,7 @@ const Services = () => {
   //       "Guidelines are general rules, recommendations, or principles that provide direction on how to achieve a specific goal. In the context of web design, guidelines help designers create websites that are visually appealing, user-friendly, and accessible to all users.",
   //   },
   // ];
-
+  
   const {
     isPending,
     data: services,

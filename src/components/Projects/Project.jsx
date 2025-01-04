@@ -67,10 +67,7 @@ const Project = ({project}) => {
             </div>
           </div>
         </div>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Project</title>
-        </Helmet>
+        
       </div>
     );
 };
