@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import Loading from "../components/Loading";
 import { useContext } from "react";
 import Contact from "./Contact";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
   const { dark } = useContext(AuthContext);
@@ -47,6 +48,9 @@ const Services = () => {
   //       "Guidelines are general rules, recommendations, or principles that provide direction on how to achieve a specific goal. In the context of web design, guidelines help designers create websites that are visually appealing, user-friendly, and accessible to all users.",
   //   },
   // ];
+  
+  const {pathname} = useLocation();
+
   
   const {
     isPending,
@@ -101,9 +105,11 @@ const Services = () => {
       </section>
 
       <Contact />
-      <Helmet>
-        <title>Services</title>
-      </Helmet>
+      {pathname == "/service" && (
+        <Helmet>
+          <title>Services</title>
+        </Helmet>
+      )}
     </>
   );
 };
