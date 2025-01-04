@@ -26,7 +26,7 @@ const Update = () => {
     description,
   } = updateData;
 
-  console.log(updateData);
+  // console.log(updateData);
   const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     name: user.name, // Static data for demonstration
