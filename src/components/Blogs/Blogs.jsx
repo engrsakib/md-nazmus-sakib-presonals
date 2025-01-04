@@ -5,44 +5,45 @@ import { Helmet } from "react-helmet";
 import Loading from "../Loading";
 import BlogCard from "./BlogCard";
 
-
 const Blogs = () => {
-    const {dark} = useContext(AuthContext);
-    const[tabs, setTabs] = useState("all");
-    const [blogs, setBlogs] = useState([]);
-    const handleButton = (ctg) => {
-        setTabs(ctg);
-    }
+  const { dark } = useContext(AuthContext);
+  const [tabs, setTabs] = useState("all");
+  const [blogs, setBlogs] = useState([]);
+  const handleButton = (ctg) => {
+    setTabs(ctg);
+  };
 
-    const {
-      isPending,
-      data: b,
-      refetch,
-    } = useQuery({
-      queryKey: ["watch-massage"],
-      queryFn: async () => {
-        const response = await fetch(`http://localhost:5000/blogs?type=${tabs}`);
-        const data = await response.json();
-        return data;
-      },
-    });
+  const {
+    isPending,
+    data: b,
+    refetch,
+  } = useQuery({
+    queryKey: ["watch-massage"],
+    queryFn: async () => {
+      const response = await fetch(
+        `https://protfolio-server-navy.vercel.app/blogs?type=${tabs}`
+      );
+      const data = await response.json();
+      return data;
+    },
+  });
 
-    // console.log(blogs);
-    // console.log(tabs);
-    useEffect(() => {
-        // if (tabs == "all") {
-        //     setBlogs(b);
-        // } else {
-        //     const filteredBlogs = b.filter((blog) => blog.type === tabs);
-        //     setBlogs(filteredBlogs);
-        // }
-        setBlogs(b);
-        refetch();
-    }, [tabs, b, refetch]);
+  // console.log(blogs);
+  // console.log(tabs);
+  useEffect(() => {
+    // if (tabs == "all") {
+    //     setBlogs(b);
+    // } else {
+    //     const filteredBlogs = b.filter((blog) => blog.type === tabs);
+    //     setBlogs(filteredBlogs);
+    // }
+    setBlogs(b);
+    refetch();
+  }, [tabs, b, refetch]);
 
-    if (isPending) {
-        return <Loading />;
-    }
+  if (isPending) {
+    return <Loading />;
+  }
   return (
     <>
       <div className="my-24 w-full bg-white p-8 rounded-lg shadow-lg">
@@ -89,12 +90,11 @@ const Blogs = () => {
         </div>
       </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8 lg:px-16"> 
-
-        {blogs?.map((blog) => (<BlogCard key={blog._id} blog={blog} />))}
-        </div>
-
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8 lg:px-16">
+        {blogs?.map((blog) => (
+          <BlogCard key={blog._id} blog={blog} />
+        ))}
+      </div>
 
       <Helmet>
         <title>Blogs</title>

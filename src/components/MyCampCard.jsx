@@ -31,7 +31,7 @@ const MyCampCard = ({ d, setDonations }) => {
       .then((result) => {
         if (result.isConfirmed) {
           // delete data
-          fetch(`http://localhost:5000/myitems/${id}`, {
+          fetch(`https://protfolio-server-navy.vercel.app/myitems/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())

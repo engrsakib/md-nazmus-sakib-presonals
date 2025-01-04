@@ -19,7 +19,9 @@ const HomeProjects = () => {
   } = useQuery({
     queryKey: ["Homeprojects"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/Homeprojects");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/Homeprojects"
+      );
       const data = await response.json();
       return data;
     },

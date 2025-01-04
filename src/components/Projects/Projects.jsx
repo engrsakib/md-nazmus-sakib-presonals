@@ -14,7 +14,9 @@ const Projects = () => {
   } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/projects");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/projects"
+      );
       const data = await response.json();
       return data;
     },
@@ -34,8 +36,8 @@ const Projects = () => {
     >
       <h1 className="text-3xl font-bold text-center mb-8">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects?.map((project) => (<Project key={project._id} project={project} />
-          
+        {projects?.map((project) => (
+          <Project key={project._id} project={project} />
         ))}
       </div>
     </div>

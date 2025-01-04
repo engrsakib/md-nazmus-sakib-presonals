@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bolttech/atoms-testimonial-card": "^0.21.0",
     "@tanstack/react-query": "^5.62.8",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
@@ -23,6 +24,7 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
+    "react-lazyload": "^3.2.1",
     "react-loader-spinner": "^6.1.6",
     "react-native-screenshot-prevent": "^1.2.1",
     "react-player": "^2.16.0",

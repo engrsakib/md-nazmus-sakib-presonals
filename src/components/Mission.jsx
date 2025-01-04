@@ -13,7 +13,9 @@ const Mission = () => {
   const { isPending, data: missions } = useQuery({
     queryKey: ["missions"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/skils");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/skils"
+      );
       const data = await response.json();
       return data;
     },

@@ -83,7 +83,7 @@ const AddSkills = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/skils", // Replace with the correct API base URL
+        "https://protfolio-server-navy.vercel.app/skils", // Replace with the correct API base URL
         payload,
         config
       );

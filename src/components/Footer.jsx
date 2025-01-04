@@ -1,6 +1,54 @@
-import React from "react";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Footer = () => {
+  const {dark} = useContext(AuthContext);
+  const links = (
+    <>
+      <NavLink
+        to="/"
+        
+      >
+        Home
+      </NavLink>
+
+      <NavLink
+        
+        to={`/about`}
+      >
+        About
+      </NavLink>
+
+      <NavLink
+        
+        to={`/service`}
+      >
+        Service
+      </NavLink>
+
+      <NavLink
+        
+        to={`/project`}
+      >
+        Project
+      </NavLink>
+
+      <NavLink
+        
+        to={`/blogs`}
+      >
+        Blogs
+      </NavLink>
+
+      <NavLink
+        
+        to={`/contact`}
+      >
+        Contact
+      </NavLink>
+    </>
+  );
   return (
     <>
       <footer className="footer mx-auto text-base-content p-10">
@@ -12,11 +60,10 @@ const Footer = () => {
           <a className="link link-hover">Advertisement</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <h6 className="footer-title">Menu</h6>
+          {
+            links
+          }
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>

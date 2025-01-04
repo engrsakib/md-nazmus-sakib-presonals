@@ -19,7 +19,9 @@ const HomeBlogs = () => {
   } = useQuery({
     queryKey: ["Homeblogs"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/Homeblogs");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/Homeblogs"
+      );
       const data = await response.json();
       return data;
     },
@@ -27,7 +29,7 @@ const HomeBlogs = () => {
   if (isPending) {
     return <Loading></Loading>;
   }
-  console.log(Homeblogs);
+  //   console.log(Homeblogs);
   return (
     <>
       <div className={`py-16 }`}>

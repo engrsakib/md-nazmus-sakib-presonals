@@ -23,7 +23,7 @@ const AddBlogs = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/blogs",
+        "https://protfolio-server-navy.vercel.app/blogs",
         formData
       );
       alert("Blog added successfully!");

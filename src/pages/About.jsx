@@ -9,6 +9,7 @@ import profile from "/sakib.png";
 import WorkingInterest from "../components/working interest/WorkingInterest";
 import Extra from "../components/extra caricluam/Extra";
 import Presonal from "../components/personalInfromation/Presonal";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const { dark } = useContext(AuthContext);
@@ -142,6 +143,10 @@ const About = () => {
 
         {/* Links Section */}
       </main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About</title>
+      </Helmet>
     </div>
   );
 };

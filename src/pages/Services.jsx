@@ -1,11 +1,10 @@
-
 import { AuthContext } from "../provider/AuthProvider";
-
 
 import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../components/Loading";
 import { useContext } from "react";
+import Contact from "./Contact";
 
 const Services = () => {
   const { dark } = useContext(AuthContext);
@@ -56,7 +55,9 @@ const Services = () => {
   } = useQuery({
     queryKey: ["watch-massage"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/services");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/services"
+      );
       const data = await response.json();
       return data;
     },
@@ -98,6 +99,8 @@ const Services = () => {
           ))}
         </div>
       </section>
+
+      <Contact />
       <Helmet>
         <title>Services</title>
       </Helmet>

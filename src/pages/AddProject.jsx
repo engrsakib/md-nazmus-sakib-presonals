@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddProject = () => {
   const [title, setTitle] = useState("");
@@ -11,6 +12,7 @@ const AddProject = () => {
   const [youtubeLink, setYoutubeLink] = useState("");
   const [technologies, setTechnologies] = useState([]);
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,7 +29,7 @@ const AddProject = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/projects",
+        "https://protfolio-server-navy.vercel.app/projects",
         projectData,
         {
           headers: {
@@ -38,6 +40,7 @@ const AddProject = () => {
 
       if (response.data.success) {
         // Clear the form fields if the response is successful
+        navigate("/");
         setTitle("");
         setDescription("");
         setPhotoURL("");

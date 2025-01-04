@@ -5,9 +5,13 @@ import Swal from "sweetalert2";
 import ContactNumber from "../components/ContactNumber";
 
 import animation from "/contact.gif";
+import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const { dark } = useContext(AuthContext);
+  const { pathname } = useLocation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,7 +49,7 @@ const Contact = () => {
       };
       // Send data to the backend
       const response = await axios.post(
-        "http://localhost:5000/contact",
+        "https://protfolio-server-navy.vercel.app/contact",
         payload,
         config
       );
@@ -74,14 +78,17 @@ const Contact = () => {
     }
   };
 
-  
   return (
     <div
       className={`min-h-screen lg:p-8 ${
         dark ? "bg-[#171212] text-gray-300" : "bg-white text-gray-800"
       }`}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+      <div
+        className={`container mx-auto flex flex-col md:flex-row items-center justify-center ${
+          pathname !== "/contact" && "hidden"
+        }`}
+      >
         {/* Left Section */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <img
@@ -166,6 +173,10 @@ const Contact = () => {
           </form>
         </div>
       </section>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact</title>
+      </Helmet>
     </div>
   );
 };

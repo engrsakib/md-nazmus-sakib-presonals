@@ -14,7 +14,9 @@ const WatchMassage = () => {
   } = useQuery({
     queryKey: ["watch-massage"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/contact");
+      const response = await fetch(
+        "https://protfolio-server-navy.vercel.app/contact"
+      );
       const data = await response.json();
       return data;
     },
@@ -26,9 +28,12 @@ const WatchMassage = () => {
 
   const handleChangeStatus = async (id, currentStatus) => {
     try {
-      await axios.patch(`http://localhost:5000/contact/${id}`, {
-        status: !currentStatus,
-      });
+      await axios.patch(
+        `https://protfolio-server-navy.vercel.app/contact/${id}`,
+        {
+          status: !currentStatus,
+        }
+      );
       alert("Status updated successfully!");
       refetch();
     } catch (error) {
@@ -42,7 +47,9 @@ const WatchMassage = () => {
     );
     if (confirm) {
       try {
-        await axios.delete(`http://localhost:5000/contact/${id}`);
+        await axios.delete(
+          `https://protfolio-server-navy.vercel.app/contact/${id}`
+        );
         alert("Message deleted successfully!");
         refetch();
       } catch (error) {
