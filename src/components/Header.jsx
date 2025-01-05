@@ -47,7 +47,7 @@ const Header = () => {
         to="/"
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
-            isActive ? "bg-green-500" : "bg-transparent hover:bg-red-400"
+            isActive ? "bg-info" : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
       >
@@ -58,7 +58,7 @@ const Header = () => {
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
             isActive
-              ? "bg-green-500 text-white"
+              ? "bg-info text-white"
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
@@ -71,7 +71,7 @@ const Header = () => {
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
             isActive
-              ? "bg-green-500 text-white"
+              ? "bg-info text-white"
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
@@ -84,7 +84,7 @@ const Header = () => {
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
             isActive
-              ? "bg-green-500 text-white"
+              ? "bg-info text-white"
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
@@ -97,7 +97,7 @@ const Header = () => {
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
             isActive
-              ? "bg-green-500 text-white"
+              ? "bg-info text-white"
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
@@ -111,7 +111,7 @@ const Header = () => {
         className={({ isActive }) =>
           `px-4 py-2 rounded ${
             isActive
-              ? "bg-green-500 text-white"
+              ? "bg-info text-white"
               : "bg-transparent hover:bg-red-400"
           } ${dark ? "text-gray-50" : "text-gray-800"}`
         }
@@ -128,7 +128,7 @@ const Header = () => {
          className={({ isActive }) =>
            `px-4 py-2 rounded ${
              isActive
-               ? "bg-green-500 text-white"
+               ? "bg-info text-white"
                : "bg-transparent hover:bg-red-400"
            } ${dark ? "text-gray-50" : "text-gray-800"}`
          }
@@ -140,7 +140,7 @@ const Header = () => {
          className={({ isActive }) =>
            `px-4 py-2 rounded ${
              isActive
-               ? "bg-green-500 text-white"
+               ? "bg-info text-white"
                : "bg-transparent hover:bg-red-400"
            } ${dark ? "text-gray-50" : "text-gray-800"}`
          }
@@ -152,7 +152,7 @@ const Header = () => {
          className={({ isActive }) =>
            `px-4 py-2 rounded ${
              isActive
-               ? "bg-green-500 text-white"
+               ? "bg-info text-white"
                : "bg-transparent hover:bg-red-400"
            } ${dark ? "text-gray-50" : "text-gray-800"}`
          }
@@ -164,7 +164,7 @@ const Header = () => {
          className={({ isActive }) =>
            `px-4 py-2 rounded ${
              isActive
-               ? "bg-green-500 text-white"
+               ? "bg-info text-white"
                : "bg-transparent hover:bg-red-400"
            } ${dark ? "text-gray-50" : "text-gray-800"}`
          }
@@ -210,7 +210,10 @@ const Header = () => {
             to={`/`}
             className={`text-2xl ${dark ? "text-gray-50" : "text-gray-800"}`}
           >
-            <img src="/logo.png" alt="" />
+            <div className="flex items-center">
+              <img className="w-20 px-3" src="/personal.png" alt="LOGO" />
+              <p className="logo text-4xl italic text-[#00B5FF]">engrsakib</p>
+            </div>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

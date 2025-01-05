@@ -8,8 +8,16 @@
   }
 }
 
+@layer utilities {
+  .logo {
+    font-family: "Rubik Vinyl", serif;
+  }
+}
+
 @layer base {
   @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+  @import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
 
   body {
     font-family: "Raleway", sans-serif;
