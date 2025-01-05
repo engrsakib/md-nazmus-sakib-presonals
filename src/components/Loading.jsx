@@ -1,16 +1,17 @@
 import React from 'react';
-import { DNA, MagnifyingGlass } from 'react-loader-spinner';
+import { Circles} from 'react-loader-spinner';
 
 const Loading = () => {
     return (
       <div className="flex justify-center items-center">
-        <DNA
-          visible={true}
+        <Circles
           height="80"
           width="80"
-          ariaLabel="dna-loading"
+          color="#4fa94d"
+          ariaLabel="circles-loading"
           wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
+          wrapperClass=""
+          visible={true}
         />
         )
       </div>
