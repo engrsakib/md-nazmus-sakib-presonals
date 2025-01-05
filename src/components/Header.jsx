@@ -212,7 +212,7 @@ const Header = () => {
           >
             <div className="flex items-center">
               <img className="w-20 max-sm:w-16 px-3" src={icon} alt="LOGO engrsakib" />
-              <p className="max-sm:text-3xl text-4xl italic text-[#00B5FF]">engrsakib</p>
+              <p className="max-sm:hidden text-4xl italic text-[#00B5FF]">engrsakib</p>
             </div>
           </Link>
         </div>

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@bolttech/atoms-testimonial-card": "^0.21.0",
+    "@stichiboi/react-elegant-mouse-trail": "^1.0.1",
     "@tanstack/react-query": "^5.62.8",
     "axios": "^1.7.9",
+    "cursor-effects": "^1.0.17",
     "date-fns": "^4.1.0",
     "firebase": "^11.0.2",
     "flowbite": "^2.5.2",

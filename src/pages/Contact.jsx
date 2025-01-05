@@ -12,6 +12,8 @@ const Contact = () => {
   const { dark } = useContext(AuthContext);
   const { pathname } = useLocation();
   
+
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
