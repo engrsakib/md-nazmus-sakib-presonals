@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Slider from "../components/Slider";
 import { Helmet } from "react-helmet";
 import Mission from "../components/Mission";
+
 import { AuthContext } from "../provider/AuthProvider";
 import AboutSection from "../components/AboutSection";
 import HomeProjects from "../components/Home/HomeProjects";
@@ -10,44 +11,47 @@ import Contact from "./Contact";
 import Services from "./Services";
 import Testomonials from "../components/Testomonials/Testomonials";
 import LazyLoad from "react-lazyload";
-import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
+import { clockCursor } from "cursor-effects";
 
 const Home = () => {
   const { user } = useContext(AuthContext);
 
+  // Add Clock Cursor Effect
+  useEffect(() => {
+    const clock = new clockCursor({
+      fontSize: "16px", // Clock font size
+      fontColor: "red", // Clock color updated to red
+      enableShadow: true, // Enable shadow effect
+    });
+
+    // Cleanup when the component unmounts
+    return () => {
+      clock.destroy();
+    };
+  }, []);
+
   return (
     <>
-      {/* MouseTrail effect */}
-      <MouseTrail strokeColor={"#FF8541"} />
-
-      {/* Page Content */}
       <LazyLoad height={200} once>
-        {/* Slider Section */}
+        {/* slider section */}
         <section className="mt-3">
           <Slider></Slider>
         </section>
-
-        {/* About Section */}
+        {/* type writer start */}
         <section>
           <AboutSection></AboutSection>
-
-          {/* Our Mission */}
+          {/* our mission */}
           <Mission></Mission>
-
-          {/* Projects */}
+          {/* projects */}
           <HomeProjects></HomeProjects>
-
-          {/* Blogs */}
+          {/* blogs */}
           <HomeBlogs></HomeBlogs>
-
-          {/* Testimonials */}
+          {/* testimonial */}
           <Testomonials></Testomonials>
-
-          {/* Services */}
+          {/* services */}
           <Services></Services>
         </section>
-
-        {/* Helmet for Meta Info */}
+        {/* type writer end */}
         <Helmet>
           <meta charSet="utf-8" />
           <title>Home</title>

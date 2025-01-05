@@ -28,6 +28,9 @@
                     a:hover {
                         text-decoration: underline;
                     }
+                    span {
+                        color: #777;
+                    }
                 </style>
             </head>
             <body>
@@ -39,9 +42,7 @@
                                 <xsl:value-of select="loc"/>
                             </a>
                             <xsl:if test="lastmod">
-                                <span>
-                                    (Last modified: <xsl:value-of select="lastmod"/>)
-                                </span>
+                                <span> (Last modified: <xsl:value-of select="lastmod"/>)</span>
                             </xsl:if>
                         </li>
                     </xsl:for-each>
