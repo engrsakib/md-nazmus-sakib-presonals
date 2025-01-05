@@ -6,7 +6,7 @@ const DownloadResume = () => {
       <div>
         <Link
           to={`https://drive.google.com/file/d/18oRoGdKpI6tktip5uIvsD7d8mnsOosQE/view?usp=drive_link`} target='_blank'
-          className="btn btn-info p-4 mx-5"
+          className="btn text-info btn-outline max-sm:text-[10px] btn-info p-4 mx-5"
         >
           Download Resume
         </Link>

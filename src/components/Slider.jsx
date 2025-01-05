@@ -43,7 +43,7 @@ const Slider = () => {
               />
             </h2>
             <p className="text-lg md:text-xl mb-6 p-3">
-              I'm Md. Nazmus Sakib, born on December 23, 2002, is a rising star
+              I&apos;m Md. Nazmus Sakib is a rising star
               in the field of problem-solving and technology. My journey through{" "}
               <Link
                 to={`https://diu.ac/`}
@@ -51,7 +51,7 @@ const Slider = () => {
                 rel="noopener noreferrer"
                 className="text-[#00B5FF]"
               >
-                Dhaka International University's
+                Dhaka International University&apos;s
               </Link>{" "}
               Department of{" "}
               <Link
