@@ -7,7 +7,7 @@ import { signOut } from "firebase/auth";
 import Swal from "sweetalert2";
 import { auth } from "../Firebase/firebase.congig";
 import DownloadResume from "./Button/DownloadResume";
-
+import icon from "/personal.png";
 
 
 const Header = () => {
@@ -211,7 +211,7 @@ const Header = () => {
             className={`text-2xl ${dark ? "text-gray-50" : "text-gray-800"}`}
           >
             <div className="flex items-center">
-              <img className="w-20 max-sm:w-16 px-3" src="/personal.png" alt="LOGO engrsakib" />
+              <img className="w-20 max-sm:w-16 px-3" src={icon} alt="LOGO engrsakib" />
               <p className="logo max-sm:text-3xl text-4xl italic text-[#00B5FF]">engrsakib</p>
             </div>
           </Link>
