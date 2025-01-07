@@ -61,17 +61,19 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Menu</h6>
-          {
-            links
-          }
+          {links}
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
+          <a
+            href="http://localhost:5173/sitemap.html"
+            className="link link-hover"
+          >
+            Sites map
+          </a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>
-        
       </footer>
       <footer className="footer footer-center text-base-content p-4">
         <aside>
