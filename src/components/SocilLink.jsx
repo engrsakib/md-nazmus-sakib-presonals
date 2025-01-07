@@ -9,6 +9,18 @@ const SocilLink = () => {
   // console.log(pathname)
     return (
       <>
+        {/* github */}
+        <Link
+          className={`${
+            pathname == "/" && "text-6xl max-sm:text-4xl"
+          } text-4xl`}
+          to={`https://github.com/engrsakib`}
+          target="_blank"
+        >
+          <FaGithub />
+        </Link>
+        {/* github */}
+
         {/* mail */}
         <Link
           className={`${
@@ -25,6 +37,7 @@ const SocilLink = () => {
           <IoMailSharp />
         </Link>
         {/* mail */}
+
         {/* linkdIn */}
         <Link
           className={`${
@@ -70,18 +83,6 @@ const SocilLink = () => {
           <FaWhatsappSquare />
         </Link>
         {/* whatsapps */}
-
-        {/* github */}
-        <Link
-          className={`${
-            pathname == "/" && "text-6xl max-sm:text-4xl"
-          } text-4xl`}
-          to={`https://github.com/engrsakib`}
-          target="_blank"
-        >
-          <FaGithub />
-        </Link>
-        {/* github */}
 
         {/* devto */}
         <Link
