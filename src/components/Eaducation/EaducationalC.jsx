@@ -8,7 +8,7 @@ const EaducationalC = () => {
     {
       title: "BSc in Computer Science and Engineering",
       company: "Dhaka International University",
-      duration: "April 2023 - Running",
+      duration: "Session: 2022-2023",
       time: "4 Years",
       result: "CGPA: promoted",
       bgColor: "bg-info",
@@ -20,7 +20,7 @@ const EaducationalC = () => {
     {
       title: "Diploma in Computer Science and Engineering",
       company: "Jhenaidah Polytechnic Institute",
-      duration: "Aug 2018 - Feb 2023",
+      duration: "Session: 2018-2019",
       time: "4 Years",
       result: "CGPA: 3.21",
       bgColor: "bg-error",
@@ -32,7 +32,7 @@ const EaducationalC = () => {
     {
       title: "Dakhil (Science)",
       company: "Thanthonia Nurun Ala Nur Fazil Madrasah",
-      duration: "Jan 2015 - Mar 2017",
+      duration: "Session: 2015-2016",
       time: "2 Years",
       result: "GPA: 4.72",
       bgColor: "bg-success",
