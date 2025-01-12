@@ -30,13 +30,13 @@ const Presonal = () => {
     }, []);
 
   const working = [
-    {
-      interst: (
-        <>
-          <span className="font-bold">Father Name:</span> Md. Siddiqullah
-        </>
-      ),
-    },
+    // {
+    //   interst: (
+    //     <>
+    //       <span className="font-bold">Father Name:</span> Md. Siddiqullah
+    //     </>
+    //   ),
+    // },
     {
       interst: (
         <>
@@ -96,8 +96,7 @@ const Presonal = () => {
     {
       interst: (
         <>
-          <span className="font-bold">Permanent Address:</span> Vill: Choto
-          Joka, Post: Goyal-Bathan, P.S: Magura, Dist: Magura, Post: 7600
+          <span className="font-bold">Permanent Address:</span> Magura, Bangladesh
         </>
       ),
     },
