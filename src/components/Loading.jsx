@@ -13,7 +13,6 @@ const Loading = () => {
           wrapperClass=""
           visible={true}
         />
-        )
       </div>
     );
 };

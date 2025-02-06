@@ -41,7 +41,7 @@ const HomeBlogs = () => {
           </div>
         </Fade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 lg:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:px-20">
           {Homeblogs?.map((blog) => (
             <BlogCard key={blog._id} blog={blog} />
           ))}
