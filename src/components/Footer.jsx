@@ -66,7 +66,7 @@ const Footer = () => {
         <nav>
           <h6 className="footer-title">Legal</h6>
           <a
-            href="http://localhost:5173/sitemap.html"
+            href="/sitemap.html"
             className="link link-hover"
           >
             Sites map
