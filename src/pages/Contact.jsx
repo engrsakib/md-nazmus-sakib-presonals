@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 import ContactNumber from "../components/ContactNumber";
+import DOMPurify from "dompurify"; // Importing DOMPurify to sanitize inputs
 
 import animation from "/contact.gif";
 import { useLocation } from "react-router-dom";
@@ -11,9 +12,7 @@ import { Helmet } from "react-helmet";
 const Contact = () => {
   const { dark } = useContext(AuthContext);
   const { pathname } = useLocation();
-  
 
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,9 +24,11 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    // Sanitize user input to prevent scripting attacks
+    const sanitizedValue = DOMPurify.sanitize(value);
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: sanitizedValue,
     }));
   };
 
@@ -57,7 +58,7 @@ const Contact = () => {
       );
 
       if (response.status === 200) {
-        Swal.fire("Your massage recive successfully", "", "success");
+        Swal.fire("Your message received successfully", "", "success");
         // Reset the form after successful submission
         setFormData({
           name: "",
@@ -67,15 +68,9 @@ const Contact = () => {
           message: "",
         });
       } else {
-        Swal.fire(
-          "Failed to send your message. Please try again.",
-          "",
-          "error"
-        );
+        Swal.fire("Failed to send your message. Please try again.", "", "error");
       }
     } catch (error) {
-      // console.error("Error sending data to the backend:", error);
-
       Swal.fire("Failed to send your message. Please try again.", "", "error");
     }
   };
@@ -100,7 +95,7 @@ const Contact = () => {
           />
         </div>
       </div>
-      {/* contact Section */}
+      {/* Contact Section */}
       <section className="container mt-6 mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="mt-6 w-full md:w-[50%]">
           <h2 className="text-3xl font-bold mb-4">MY CONTACT</h2>
@@ -111,7 +106,6 @@ const Contact = () => {
             technologies to solving complex programming challenges, I am
             committed to delivering high-quality solutions.
           </p>
-
           <ContactNumber></ContactNumber>
         </div>
 
@@ -175,7 +169,7 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      {pathname == "/contact" && (
+      {pathname === "/contact" && (
         <Helmet>
           <title>Contact</title>
         </Helmet>
